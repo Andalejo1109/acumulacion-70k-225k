@@ -32,32 +32,32 @@ El ahorro solo no cierra la meta. El compuesto de 8–10% sí.
 
 ## Fase 2 — retirar 10 mil y no frenar el capital
 
-Al cruzar 225 mil **dejan de entrar los 23 mil** (o se bajan) y empiezan a salir **10 mil al año**.
+Al cruzar 225 mil **dejan de ser obligatorios los 23 mil** y empiezan a salir **10 mil al año**.
 
-La regla es simple: si el portafolio rinde más que lo que retiras, el saldo sigue subiendo.
+La regla: si el portafolio rinde más que lo que retiras, el saldo sigue subiendo.
 
-- Retiro: 10.000 / 225.000 = **4.4%** el primer año.
-- Si el capital rinde ~8%, quedan ~3.6 puntos de crecimiento neto.
-- Si rinde ~10%, quedan ~5.6 puntos.
+- Retiro: 10.000 / 225.000 = **4,4%** el primer año.
+- Si rinde ~8%, quedan ~3,6 puntos de crecimiento neto.
+- Si rinde ~10%, quedan ~5,6 puntos.
 
-Ejemplo partiendo de **225 mil**, retiro fijo de 10 mil, sin aportes nuevos:
+Ejemplo partiendo de **225 mil**, retiro fijo de 10 mil, **sin aportes nuevos**:
 
-| Año de retiro | Capital si rinde 8% | Capital si rinde 10% | Retirado acumulado |
+| Años retirando | Capital si rinde 8% | Capital si rinde 10% | Ya cobrado |
 |---|---:|---:|---:|
 | 0 (día 1) | 225.000 | 225.000 | 0 |
 | 1 | 233.000 | 237.500 | 10.000 |
-| 5 | 271.500 | 296.000 | 50.000 |
-| 10 | 340.900 | 393.400 | 100.000 |
+| 5 | 272.000 | 301.000 | 50.000 |
+| 10 | 341.000 | 424.000 | 100.000 |
 
 En diez años habrías cobrado **100 mil** y el portafolio, en esta ilustración, estaría **más grande que el día que empezaste a retirar**.
 
-Eso es el retiro parcial: el capital trabaja; tú no lo apagas.
+Eso es el retiro parcial: el capital trabaja; no se apaga.
 
-Tres matices honestos:
+Tres matices:
 
-1. Un año malo al inicio (secuencia) duele más que un año malo en acumulación. Por eso se llega a 225 mil *antes* de vivir de él.
-2. Si el gasto sube con inflación (~3%), el 4% se vuelve un poco más exigente. Aun así, 8% de retorno menos 4% que crece al 3% deja margen.
-3. Si el año 5 termina en 243–259 mil en vez de 225 mil, el 10 mil es ~4% o menos. Más colchón.
+1. Un año malo al inicio del retiro duele más que en acumulación. Por eso se llega a 225 mil *antes* de vivir de él.
+2. Si el gasto sube con inflación (~3%), el 4% se vuelve un poco más exigente. Aun así, un retorno de 8% deja margen.
+3. Si el año 5 termina en 243–259 mil, esos 10 mil son ~4% o menos. Más colchón.
 
 ## Cómo correrlo
 
