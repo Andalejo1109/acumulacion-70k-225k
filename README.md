@@ -2,17 +2,18 @@
 
 Proyección de **DCA mensual** para un retiro parcial de **10 mil USD al año**.
 
-No es un backtest histórico. Es una ilustración de tres caminos a 5 años:
+Dos fases, un mismo portafolio:
 
-1. Solo aportes (0%)
-2. Aportes + ~8% anual
-3. Aportes + ~10% anual
+1. **Acumular** (hoy → año 5): aportar 23 mil al año hasta cruzar 225 mil.
+2. **Retirar y seguir creciendo** (año 5 en adelante): sacar 10 mil al año (~4%) y dejar el resto invertido.
+
+No es un backtest histórico. Es una ilustración a 8% y 10% anual. El mercado no sube en línea recta.
 
 ![Proyección de acumulación](acumulacion_70k_225k.svg)
 
 PNG y GIF para redes: genera `acumulacion_70k_225k.png` y `.gif` con el script o el notebook.
 
-## Supuestos
+## Fase 1 — llegar a 225 mil
 
 | | |
 |---|---|
@@ -20,17 +21,43 @@ PNG y GIF para redes: genera `acumulacion_70k_225k.png` y `.gif` con el script o
 | Aporte | 23.000 USD / año (1.917 / mes) |
 | Horizonte | 5 años |
 | Meta | 225.000 USD |
-| Retiro parcial | 10.000 USD / año (~4% de la meta) |
 
-## Resultado
+| Escenario | Capital año 5 | ¿Llega a 225k? |
+|---|---:|---|
+| Solo aportes (0%) | 185.000 | No |
+| ~8% | 242.664 | Sí |
+| ~10% | 259.478 | Sí |
 
-| Escenario | Capital año 5 | ¿Llega a 225k? | 4% de ese capital |
-|---|---:|---|---:|
-| Solo aportes | 185.000 | No | 7.400 |
-| ~8% | 242.664 | Sí | 9.707 |
-| ~10% | 259.478 | Sí | 10.379 |
+El ahorro solo no cierra la meta. El compuesto de 8–10% sí.
 
-El ahorro solo no cierra la meta. El compuesto de 8–10% sí. El mercado no sube en línea recta: 8–10% es banda de planificación, no garantía.
+## Fase 2 — retirar 10 mil y no frenar el capital
+
+Al cruzar 225 mil **dejan de entrar los 23 mil** (o se bajan) y empiezan a salir **10 mil al año**.
+
+La regla es simple: si el portafolio rinde más que lo que retiras, el saldo sigue subiendo.
+
+- Retiro: 10.000 / 225.000 = **4.4%** el primer año.
+- Si el capital rinde ~8%, quedan ~3.6 puntos de crecimiento neto.
+- Si rinde ~10%, quedan ~5.6 puntos.
+
+Ejemplo partiendo de **225 mil**, retiro fijo de 10 mil, sin aportes nuevos:
+
+| Año de retiro | Capital si rinde 8% | Capital si rinde 10% | Retirado acumulado |
+|---|---:|---:|---:|
+| 0 (día 1) | 225.000 | 225.000 | 0 |
+| 1 | 233.000 | 237.500 | 10.000 |
+| 5 | 271.500 | 296.000 | 50.000 |
+| 10 | 340.900 | 393.400 | 100.000 |
+
+En diez años habrías cobrado **100 mil** y el portafolio, en esta ilustración, estaría **más grande que el día que empezaste a retirar**.
+
+Eso es el retiro parcial: el capital trabaja; tú no lo apagas.
+
+Tres matices honestos:
+
+1. Un año malo al inicio (secuencia) duele más que un año malo en acumulación. Por eso se llega a 225 mil *antes* de vivir de él.
+2. Si el gasto sube con inflación (~3%), el 4% se vuelve un poco más exigente. Aun así, 8% de retorno menos 4% que crece al 3% deja margen.
+3. Si el año 5 termina en 243–259 mil en vez de 225 mil, el 10 mil es ~4% o menos. Más colchón.
 
 ## Cómo correrlo
 
@@ -39,16 +66,15 @@ pip install -r requirements.txt
 python simular_acumulacion_225k.py
 ```
 
-Notebook paso a paso: [Acumulacion_70k_225k.ipynb](Acumulacion_70k_225k.ipynb) (Colab o Jupyter).
+Notebook: [Acumulacion_70k_225k.ipynb](Acumulacion_70k_225k.ipynb).
 
 ## Archivos
 
-- `simular_acumulacion_225k.py` — script que arma PNG + GIF
-- `Acumulacion_70k_225k.ipynb` — misma lógica, celda por celda
+- `simular_acumulacion_225k.py` — PNG + GIF de la fase 1
+- `Acumulacion_70k_225k.ipynb` — celdas paso a paso
 - `acumulacion_70k_225k.svg` — gráfica del README
-- `acumulacion_70k_225k.png` / `.gif` — se generan al correr el script
 
-La paleta visual reutiliza el estilo de [Retiro-portafolio](https://github.com/Andalejo1109/Retiro-portafolio).
+Paleta: [Retiro-portafolio](https://github.com/Andalejo1109/Retiro-portafolio).
 
 ## Disclaimer
 
