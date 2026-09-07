@@ -7,7 +7,7 @@ Dos fases, un mismo portafolio:
 
 Escenarios de rentabilidad: **10%, 13% y 17%** anual. Son ilustraciones, no una promesa. 13–17% se parece más a una década buena de growth que a un promedio de planificación.
 
-![Proyección de acumulación](acumulacion_70k_225k.svg)
+![De 70 mil a 225 mil — escenarios 10%, 13% y 17%](acumulacion_70k_225k.svg?raw=1)
 
 ## Fase 1 — llegar a 225 mil
 
