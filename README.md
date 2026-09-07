@@ -1,17 +1,13 @@
-# De 70 mil a 225 mil en 5 años
-
-Proyección de **DCA mensual** para un retiro parcial de **10 mil USD al año**.
+# De 70 mil a 225 mil, luego retiro indexado al 3%
 
 Dos fases, un mismo portafolio:
 
-1. **Acumular** (hoy → año 5): aportar 23 mil al año hasta cruzar 225 mil.
-2. **Retirar y seguir creciendo** (año 5 en adelante): sacar 10 mil al año (~4%) y dejar el resto invertido.
+1. **Acumular** (hoy → año 5): 70 mil de partida + **23 mil al año** hasta cruzar **225 mil**.
+2. **Retirar y seguir creciendo**: el año 1 se sacan **10 mil**. Cada año siguiente el retiro sube **3%** (inflación). El resto se queda invertido.
 
-No es un backtest histórico. Es una ilustración a 8% y 10% anual. El mercado no sube en línea recta.
+Escenarios de rentabilidad: **10%, 13% y 17%** anual. Son ilustraciones, no una promesa. 13–17% se parece más a una década buena de growth que a un promedio de planificación.
 
 ![Proyección de acumulación](acumulacion_70k_225k.svg)
-
-PNG y GIF para redes: genera `acumulacion_70k_225k.png` y `.gif` con el script o el notebook.
 
 ## Fase 1 — llegar a 225 mil
 
@@ -25,39 +21,43 @@ PNG y GIF para redes: genera `acumulacion_70k_225k.png` y `.gif` con el script o
 | Escenario | Capital año 5 | ¿Llega a 225k? |
 |---|---:|---|
 | Solo aportes (0%) | 185.000 | No |
-| ~8% | 242.664 | Sí |
 | ~10% | 259.478 | Sí |
+| ~13% | 286.701 | Sí |
+| ~17% | 327.017 | Sí |
 
-El ahorro solo no cierra la meta. El compuesto de 8–10% sí.
+Sin rendimiento no alcanza. Con 10% o más, sí — y sobra colchón.
 
-## Fase 2 — retirar 10 mil y no frenar el capital
+## Fase 2 — 10 mil el año 1, +3% cada año
 
-Al cruzar 225 mil **dejan de ser obligatorios los 23 mil** y empiezan a salir **10 mil al año**.
+Al cruzar 225 mil dejan de ser obligatorios los 23 mil de aporte. Empieza el retiro:
 
-La regla: si el portafolio rinde más que lo que retiras, el saldo sigue subiendo.
+| Año de retiro | Monto |
+|---|---:|
+| 1 | 10.000 |
+| 2 | 10.300 |
+| 5 | 11.255 |
+| 10 | 13.048 |
 
-- Retiro: 10.000 / 225.000 = **4,4%** el primer año.
-- Si rinde ~8%, quedan ~3,6 puntos de crecimiento neto.
-- Si rinde ~10%, quedan ~5,6 puntos.
+En 10 años se habrían cobrado **114.639** (no 100 mil: la inflación del retiro suma ~14.6 mil extra).
 
-Ejemplo partiendo de **225 mil**, retiro fijo de 10 mil, **sin aportes nuevos**:
+Partiendo de **225 mil**, sin aportes nuevos:
 
-| Años retirando | Capital si rinde 8% | Capital si rinde 10% | Ya cobrado |
-|---|---:|---:|---:|
-| 0 (día 1) | 225.000 | 225.000 | 0 |
-| 1 | 233.000 | 237.500 | 10.000 |
-| 5 | 272.000 | 301.000 | 50.000 |
-| 10 | 341.000 | 424.000 | 100.000 |
+| Años retirando | Capital @ 10% | Capital @ 13% | Capital @ 17% | Ya cobrado |
+|---|---:|---:|---:|---:|
+| 0 | 225.000 | 225.000 | 225.000 | 0 |
+| 1 | 237.500 | 244.250 | 253.250 | 10.000 |
+| 5 | 297.900 | 346.200 | 419.500 | 53.091 |
+| 10 | 405.000 | 558.700 | 834.200 | 114.639 |
 
-En diez años habrías cobrado **100 mil** y el portafolio, en esta ilustración, estaría **más grande que el día que empezaste a retirar**.
+En los tres escenarios el portafolio **termina más grande** que el día 1 del retiro, después de haber pagado un sueldo que sube con inflación.
 
-Eso es el retiro parcial: el capital trabaja; no se apaga.
+Si el año 5 cierra en 259 / 287 / 327 mil (fase 1 a 10 / 13 / 17%), el colchón es aún mayor: el 10 mil inicial es 3,9% / 3,5% / 3,1% de ese capital.
 
 Tres matices:
 
-1. Un año malo al inicio del retiro duele más que en acumulación. Por eso se llega a 225 mil *antes* de vivir de él.
-2. Si el gasto sube con inflación (~3%), el 4% se vuelve un poco más exigente. Aun así, un retorno de 8% deja margen.
-3. Si el año 5 termina en 243–259 mil, esos 10 mil son ~4% o menos. Más colchón.
+1. 17% durante 15 años seguidos es un escenario **optimista**. Sirve para ver el techo, no para presupuestar el retiro.
+2. El riesgo de secuencia (un 2022 el año 1 de retiro) no aparece en una línea recta. Por eso se llega a 225 mil *antes* de vivir de él.
+3. El 3% del retiro es el piso de inflación del plan. Si la inflación corre al 5%, hay que revisar el monto — no el método.
 
 ## Cómo correrlo
 
@@ -66,15 +66,7 @@ pip install -r requirements.txt
 python simular_acumulacion_225k.py
 ```
 
-Notebook: [Acumulacion_70k_225k.ipynb](Acumulacion_70k_225k.ipynb).
-
-## Archivos
-
-- `simular_acumulacion_225k.py` — PNG + GIF de la fase 1
-- `Acumulacion_70k_225k.ipynb` — celdas paso a paso
-- `acumulacion_70k_225k.svg` — gráfica del README
-
-Paleta: [Retiro-portafolio](https://github.com/Andalejo1109/Retiro-portafolio).
+Genera PNG + GIF y imprime las dos tablas. Notebook: [Acumulacion_70k_225k.ipynb](Acumulacion_70k_225k.ipynb).
 
 ## Disclaimer
 
